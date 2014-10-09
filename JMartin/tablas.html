@@ -2,68 +2,88 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tarea2</title>
+	<title>PaginaWeb</title>
 	<!--Pacheco Perez Juan Martin-->
-	<style>
-	#menu{
-				background-color: blue;
+		<style>		
+			header{
+			   background-color:#e95644;
+			   color:white;
+			}
+			footer{
+				background-color: #343434;
+				border-top: 6px solid #e95644;
+				color:white;
+				padding: 30px;
+			}
+			.servicio{
+				color:red;
+				display: inline-block;
+				padding-top:20px; 
+				padding-bottom: 20px;
+				text-align: center;				
+				width:33%;
+			}
+			.parte-inferior{
+			   display: inline-block;
+			   width:33%;
+			}
+			#menu{
+				background-color: #123456;
 				display: inline-block;
 				width: 68%;
 			}
-
-	    #slogan{
-			   background-color: green;
+			#menu li{
+				display: inline-block;
+			} 
+			#inicio{
+			   background-color: #345;
 			   display: inline-block;
 			   padding-left: 20px;
 			   vertical-align: top;
 			   width: 29%;	
 			}
-    	#presentacion{
+			#presentacion{
 				background-image: url("img/portada6.jpg");
-				/*hacemos que no se repita el fondo*/
 				background-repeat: no-repeat;
-				/*estira la imagen de fondo 
-				  preservando la relacion de aspecto
-				*/
+				/*estira la imagen de fondo*/
 				background-size: cover;
-				/*centramos en el eje x y Y la imagen*/
 				background-position: center center;
-
 				background-attachment: fixed;
-
 				color:white;
 				height: 500px;
-				/*para el tam de letra */
+				/*para el tamaño de letra */
 				font-size: 40px;
 				/*para centrar horizontalmente*/
 				line-height: 500px;
 				text-align: center;
-				/*width: 150px;*/
-				/*
-				margin-top: 100px;
-				*/
 			}
-	</style>
-</head>
-<body>
-	<h1 id="slogan">Temas</h1>
-	<nav id="menu">		
-        <ul>
-         	<li>Peliculas</li>
-         	<li>Flores</li>
-         	<li>Carros</li>
-         </ul> 
-	</nav>
-    <section id="presentacion">
-    	página multimedia
-    </section>
-	<section> 
-		<article>
-			<br>
+
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<div id="inicio">
+				<h1>Temas</h1>
+				<h6>by JMP</h6>
+			</div>
+			<nav id="menu">
+				<ul>
+					<li>Peliculas</li>
+         	        <li>Flores</li>
+         	        <li>Carros</li>
+				</ul>
+			</nav>
+		</header>
+		<section id="presentacion">
+			página multimedia
+		</section>
+		<section>
+			<article>
 			<header>
 				<h1>Tablas</h1>
 			</header>
-			<table border="5" cellspacing="10" cellpading="10" bgcolor="black" frame="above" name="tabla1">
+			<table border="5" cellspacing="10" cellpading="10" bgcolor="black" frame="above" name="tabla1" class="servicio">
 			    <thead bgcolor="yellow"> <!--encabezado para la tabla-->
 				    <th >Peliculas</th>
 			    </thead>
@@ -74,7 +94,7 @@
 			    </tbody>                 
 		    </table>
 		    <br>
-		    <table border="5" cellspacing="10" cellpading="10" bgcolor="black" frame="above" name="tabla2">
+		    <table border="5" cellspacing="10" cellpading="10" bgcolor="black" frame="above" name="tabla2" class="servicio">
 			    <thead bgcolor="yellow"> <!--encabezado para la tabla-->
 				    <th >Flores</th>
 			    </thead>
@@ -85,7 +105,7 @@
 			    </tbody>                 
 		    </table>
 		    <br>
-		    <table border="5" cellspacing="10" cellpading="10" bgcolor="black" frame="above" name="tabla3">
+		    <table border="5" cellspacing="10" cellpading="10" bgcolor="black" frame="above" name="tabla3" class="servicio">
 			    <thead bgcolor="yellow"> <!--encabezado para la tabla-->
 				    <th >Carros</th>
 			    </thead>
@@ -95,7 +115,35 @@
 				    </tr>			
 			    </tbody>                 
 		    </table>
-		</article>
-	</section>
-</body>
+		</section>	
+		<footer>
+			<div class="parte-inferior">
+				<h3>Síguenos</h3>
+				<div>
+					<img src="img/facebook.png"/>
+					<img src="img/google.png"/>
+					<img src="img/twitter.png"/>
+				</div>
+			</div>
+			<div class="parte-inferior">
+				<h3>Suscríbete</h3>
+				<form>
+					<label>Email: </label>
+					<input type="text"/>
+					<input type="submit"/>
+				</form>
+			</div>
+			<div class="parte-inferior">
+				<h3>Powered by:</h3>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/">HTML5</a>
+					</li>
+					<li>
+						<a href="https://github.com">GitHub</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
 </html>
